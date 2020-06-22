@@ -3,24 +3,42 @@
 
 <body>
 
-{% for project in projects %}
-
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/custom2.css' %}">
-<img src="{% static 'portfolio/header.PNG' %}" height="290px" width="100%">
+<img src="{% static 'portfolio/E.M.PNG' %}" height="300px" width="100%">
 <br>
 <br>
 <br>
 <br>
 <br>
-<h3 class="pushy"><link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Concert+One&display=swap" rel="stylesheet">{{ project.title }}</h3>
-<p class="pushy"> <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Concert+One&display=swap" rel="stylesheet">{{ project.description }}</p>
-<img src="{{project.image.url}}" width="820" height="330">
+<div class="row">
+{% for project in projects %}
+
+  <div class="column">
+    <img src="{{ project.image.url }}" style="width:300px">
+  </div>
+{% endfor %}
+</div>
+
+<div class="row">
+{% for project in projects %}
+  <div class="column1">
+    <h2> {{ project.title }} </h2>
+  </div>
+  {% endfor %}
+</div>
+
 <br>
 {% if project.url %}
-<a href={{project.url}}>link</a>
+<a href={{project.url}}></a>
 {% endif %}
-<a href="{% url 'blog:all_blogs' %}">Blog</a>
-{% endfor %}
+
+
 </body>
 {% endblock %}
+
+<div class="row">
+  <div class="column">
+    <img src="{{project.image.url}}" style="width:100%">
+       <span class="caption">Text below the image</span>
+  </div>

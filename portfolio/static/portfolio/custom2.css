@@ -1,7 +1,8 @@
-  nav a{
+ nav a{
 
-                   color:#FF4500 !important;
-
+font-family: 'Amatic SC', cursive;
+font-family: 'Odibee Sans', cursive;
+font-family: 'Playfair Display SC', serif;
 
                  }
 
@@ -11,11 +12,11 @@
     max-width: 75px;
 }
 
-.push{
+.column{
+padding : 0px 90px 0px 100px
+}
 
-font-family: 'Amatic SC', cursive;
-    color:#FF4500 !important;}
-.pushy {
-font-family: 'Amatic SC', cursive;
-font-family: 'Concert One', cursive;
+
+.column1{
+padding : 0px 100px 0px 200px
 }

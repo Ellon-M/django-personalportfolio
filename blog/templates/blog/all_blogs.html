@@ -2,6 +2,7 @@
 {% block content %}
 {% for blog in blogs %}
 
+
 <a href="{% url 'blog:detail' blog.id %}" ><h2>{{ blog.title }}</h2></a>
 <h3>{{ blog.blog_title }}</h3>
 <h5>-{{ blog.blog_date| date:'F jS Y' }}-</h5>
