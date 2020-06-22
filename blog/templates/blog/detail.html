@@ -1,0 +1,14 @@
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" type="text/css" href="custom.css">
+{% extends "portfolio/base.html" %}
+{% block content %}
+<h2>{{ blog.title }}</h2>
+<br>
+{{ blog.blog_title }}
+<hr>
+{{ blog.blog_date }}
+<br>
+{{ blog.description }}
+
+{% endblock %}

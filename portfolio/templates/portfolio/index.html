@@ -1,0 +1,26 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+
+<body>
+
+{% for project in projects %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/custom2.css' %}">
+<img src="{% static 'portfolio/header.PNG' %}" height="290px" width="100%">
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 class="pushy"><link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Concert+One&display=swap" rel="stylesheet">{{ project.title }}</h3>
+<p class="pushy"> <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Concert+One&display=swap" rel="stylesheet">{{ project.description }}</p>
+<img src="{{project.image.url}}" width="820" height="330">
+<br>
+{% if project.url %}
+<a href={{project.url}}>link</a>
+{% endif %}
+<a href="{% url 'blog:all_blogs' %}">Blog</a>
+{% endfor %}
+</body>
+{% endblock %}
