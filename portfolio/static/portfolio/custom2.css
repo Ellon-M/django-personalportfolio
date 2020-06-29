@@ -4,7 +4,8 @@ font-family: 'Amatic SC', cursive;
 font-family: 'Odibee Sans', cursive;
 font-family: 'Playfair Display SC', serif;
 
-                 }
+
+}
 
 .img-responsive{  height: auto;
     width: auto;
@@ -12,11 +13,25 @@ font-family: 'Playfair Display SC', serif;
     max-width: 75px;
 }
 
+
 .column{
-padding : 0px 90px 0px 100px
+padding : 0px 100px 0px 100px
 }
 
 
 .column1{
-padding : 0px 100px 0px 200px
+
+
+     padding : 0px 200px 0px 100px
+}
+
+
+.w3-container{
+font-family: 'Dancing Script', cursive;
+text-align: center
+}
+
+.vl {
+  border-left: 6px solid black;
+  height: 500px;
 }
