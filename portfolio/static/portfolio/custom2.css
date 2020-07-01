@@ -15,23 +15,48 @@ font-family: 'Playfair Display SC', serif;
 
 
 .column{
-padding : 0px 100px 0px 100px
+padding : 30px 100px 0px 100px
+
 }
 
 
 .column1{
 
 
-     padding : 0px 200px 0px 100px
+     padding : 0px 190px 0px 90px
 }
 
 
-.w3-container{
-font-family: 'Dancing Script', cursive;
-text-align: center
+.ok {
+
+background-color: Teal
+
+
+
 }
 
 .vl {
   border-left: 6px solid black;
   height: 500px;
+}
+
+#tc {
+background-color: black
+}
+
+#ct {
+background-color: black
+}
+
+#txt {
+background-color: black
+
+}
+
+#tc {
+ border-top: 2px solid black;
+}
+
+#hi {
+font-family: 'Dancing Script', cursive;
 }

@@ -1,53 +1,60 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
 
-<body>
-
 {% load static %}
+
+
+
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/custom2.css' %}">
 <img src="{% static 'portfolio/E.M.PNG' %}" height="300px" width="100%">
-<br>
-<br>
- <br>
- <br>
 
- <div class="w3-container">
+
+ <div class="ok" align="center">
+     <br>
+<br>
+ <br>
+ <br>
 
    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
    <h1 class="w3-center w3-animate-top">
-     <div>Hello!
+       <div id="hi" style="color: white"> <b>Hello!</b>
      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
   <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
 </svg>
      </div>
-     <div> Welcome to my Portfolio.
+       <br>
+       <br>
+       <br>
+     <div style="color: white"> Welcome to my Portfolio.
        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
   <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
 </svg>
      </div>
-     <div> My name is Ellon. Its nice to see you here!
+     <div style="color: white"> My name is Ellon. Its nice to see you here!
      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
 </svg>
      </div>
      <br>
      <br>
-     <div> Coding is fun!</div>
+     <div style="color: white"> Coding is fun!</div>
    </h1>
+     <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="row">
+
+
+<div class="row" id="tc">
 {% for project in projects %}
 
   <div class="column">
@@ -57,17 +64,22 @@
   </div>
 {% endfor %}
 </div>
-<br>
+<div id="ct">
+    <br>
+    <br>
+</div>
 
-<div class="row" >
+<div class="row"id="txt">
 {% for project in projects %}
   <div class="column1">
-    <h2> {{ project.title }} </h2>
+    <h2 style="color: white"> {{ project.title }} </h2>
+      <br>
+    <br>
   </div>
 
-
-{% endfor %}
+    {% endfor %}
 </div>
+
 <br>
 {% for project in projects %}
 {% if project.url %}
@@ -76,5 +88,23 @@
 {% endfor %}
 
 </body>
+<footer>
+    <br>
+    <br>
+    <br>
+    <br>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+</footer>
 {% endblock %}
 
