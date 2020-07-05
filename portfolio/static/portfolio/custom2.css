@@ -11,52 +11,6 @@ font-family: 'Playfair Display SC', serif;
     width: auto;
     max-height: 40px;
     max-width: 75px;
-}
-
-
-.column{
-padding : 30px 100px 0px 100px
-
-}
-
-
-.column1{
-
-
-     padding : 0px 190px 0px 90px
-}
-
-
-.ok {
-
-background-color: Teal
 
 
 
-}
-
-.vl {
-  border-left: 6px solid black;
-  height: 500px;
-}
-
-#tc {
-background-color: black
-}
-
-#ct {
-background-color: black
-}
-
-#txt {
-background-color: black
-
-}
-
-#tc {
- border-top: 2px solid black;
-}
-
-#hi {
-font-family: 'Dancing Script', cursive;
-}

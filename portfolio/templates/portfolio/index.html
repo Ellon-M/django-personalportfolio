@@ -2,109 +2,140 @@
 {% block content %}
 
 {% load static %}
-
-
-
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/custom2.css' %}">
-<img src="{% static 'portfolio/E.M.PNG' %}" height="300px" width="100%">
+</head>
 
-
- <div class="ok" align="center">
-     <br>
-<br>
- <br>
- <br>
-
-   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-
-   <h1 class="w3-center w3-animate-top">
-       <div id="hi" style="color: white"> <b>Hello!</b>
-     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
-  <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
-</svg>
-     </div>
-       <br>
-       <br>
-       <br>
-     <div style="color: white"> Welcome to my Portfolio.
-       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
-  <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
-</svg>
-     </div>
-     <div style="color: white"> My name is Ellon. Its nice to see you here!
-     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-</svg>
-     </div>
-     <br>
-     <br>
-     <div style="color: white"> Coding is fun!</div>
-   </h1>
-     <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+    <img src="{% static 'portfolio/Bird-Free-PNG-Image.png' %}" class="img-fluid">
+  </div>
 </div>
 
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext"class="font-weight-bold" style="font-family: 'Source Code Pro', monospace;">“ Code is like humor. When you have to explain it, it’s bad.” – Cory House 😊 </h1>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div class="row" >
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
 
-
-<div class="row" id="tc">
-{% for project in projects %}
-
-  <div class="column">
     {% if project.url %}
-    <a href={{project.url}}>   <img src="{{ project.image.url }}" style="width:300px"> </a>
-{% endif %}
-  </div>
-{% endfor %}
-</div>
-<div id="ct">
-    <br>
-    <br>
-</div>
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
 
-<div class="row"id="txt">
-{% for project in projects %}
-  <div class="column1">
-    <h2 style="color: white"> {{ project.title }} </h2>
-      <br>
-    <br>
-  </div>
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3 class="row justify-content-center my-2" style="font-family: font-family: 'Inconsolata', monospace;">{{ project.title }}</h3>
 
+    <p style="font-family: 'Source Code Pro', monospace;">{{ project.description }}</p>
+  </div>
     {% endfor %}
 </div>
-
 <br>
-{% for project in projects %}
-{% if project.url %}
-<a href={{project.url}}>  </a>
-{% endif %}
-{% endfor %}
-
-</body>
-<footer>
-    <br>
-    <br>
-    <br>
-    <br>
 <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<hr>
+<footer style="background-color: black">
+<footer class="page-footer font-small blue pt-4">
 
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
 
+    <!-- Grid row -->
+    <div class="row">
 
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3" style="color: white">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">about</h5>
+        <p>This website was designed by django 3, with additional frontend css and bootstrap.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase" style=" color: white">Social</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://twitter.com/poordrunkard">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/elllooon/">Instagram</a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/aryaspancakes/boards/">Pinterest</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase" style="color: white">Contacts</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">+254706528027</a>
+          </li>
+          <li>
+            <a href="#!">+254768554214</a>
+          </li>
+          <li>
+           <a href = "mailto: mordecaimwema11@gmail.com">mordecaimwema11@gmail.com</a>
+          </li>
+          <li>
+          <a href= " malito: mordecaiellon@outlook.com">mordecaiellon@outlook.com</a>
+
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: white">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> emordecai.pythonanywhere.com</a>
+  </div>
+  <!-- Copyright -->
 
 </footer>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
 {% endblock %}
 
